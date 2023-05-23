@@ -8,13 +8,14 @@ const NavbarContainer = styled.header`
   width: 100%;
   height: 70px;
   top: 0;
-  position:sticky;
+  position: sticky;
   z-index: 99;
   background-color: #ffff;
+  font-family: Georgia, serif;
 `;
 
 const NavbarWrapper = styled.div`
-  margin: auto;
+  margin: 1rem auto;
   width: 100%;
   max-width: 1300px;
   height: 100%;
@@ -29,7 +30,6 @@ const LogoContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding-left: 1rem;
 `;
 
 const StyledImg = styled.img`
