@@ -3,10 +3,11 @@ import img from "../assets/logo_kinevita_negro.jpg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { StyledButton } from "./StyledButton";
 
 const NavbarContainer = styled.header`
   width: 100%;
-  height: 70px;
+  height: 80px;
   top: 0;
   position: sticky;
   z-index: 99;
@@ -23,6 +24,10 @@ const NavbarWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 968px) {
+    justify-content:space-around;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -30,6 +35,20 @@ const LogoContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
+`;
+
+const NavbarButton = styled(StyledButton)`
+  margin-left: auto;
+  color: black;
+
+  &:hover {
+    background-color: #e9682d;
+    
+  }
+  @media screen and (max-width: 968px) {
+    margin-left:0;
+  }
+
 `;
 
 const StyledImg = styled.img`
@@ -46,7 +65,7 @@ const Menu = styled.ul`
     width: 100%;
     height: 80vh;
     position: absolute;
-    top: 70px;
+    top: 55px;
     left: ${({ click }) => (click ? 0 : "-100%")};
     flex-direction: column;
     transition: 0.5s all ease-in;
@@ -108,9 +127,11 @@ const Navbar = () => {
               <StyledImg onClick={() => setClick(false)} src={img} />
             </Link>
           </LogoContainer>
+          <NavbarButton inputColor='#e9682d'>Reserva ya</NavbarButton>
           <MobileIcon onClick={() => setClick(!click)}>
             {click ? <StyledTimesIcon /> : <StyledBarsIcon />}
           </MobileIcon>
+          
           <Menu click={+click}>
             <MenuItem>
               <MenuItemLink to="/" onClick={() => setClick(!click)}>
