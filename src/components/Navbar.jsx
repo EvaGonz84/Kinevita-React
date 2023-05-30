@@ -16,7 +16,7 @@ const NavbarContainer = styled.header`
 `;
 
 const NavbarWrapper = styled.div`
-  margin: 1rem auto;
+  padding: 1rem auto;
   width: 100%;
   max-width: 1300px;
   height: 100%;
@@ -26,7 +26,7 @@ const NavbarWrapper = styled.div`
   flex-wrap: wrap;
 
   @media screen and (max-width: 968px) {
-    justify-content:space-around;
+    justify-content: space-around;
   }
 `;
 
@@ -43,12 +43,10 @@ const NavbarButton = styled(StyledButton)`
 
   &:hover {
     background-color: #e9682d;
-    
   }
   @media screen and (max-width: 968px) {
-    margin-left:0;
+    margin-left: 0;
   }
-
 `;
 
 const StyledImg = styled.img`
@@ -88,8 +86,8 @@ const MenuItem = styled.li`
 `;
 
 const MenuItemLink = styled(Link)`
-  text-decoration: none;
   color: black;
+  text-decoration: none;
   &:hover {
     text-decoration: underline;
     text-underline-offset: 0.5rem;
@@ -127,11 +125,11 @@ const Navbar = () => {
               <StyledImg onClick={() => setClick(false)} src={img} />
             </Link>
           </LogoContainer>
-          <NavbarButton inputColor='#e9682d'>Reserva ya</NavbarButton>
+          <NavbarButton color="#e9682d">Reserva ya</NavbarButton>
           <MobileIcon onClick={() => setClick(!click)}>
             {click ? <StyledTimesIcon /> : <StyledBarsIcon />}
           </MobileIcon>
-          
+
           <Menu click={+click}>
             <MenuItem>
               <MenuItemLink to="/" onClick={() => setClick(!click)}>

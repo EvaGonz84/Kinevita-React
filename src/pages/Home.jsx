@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import background from "../assets/Portada.jpg";
 import { StyledButton } from "../components/StyledButton";
+import { Cards } from "../components/Cards";
 
 const Container = styled.div`
   width: 100%;
@@ -39,6 +40,7 @@ const ButtonContainer = styled.div`
 
 const Home = () => {
   return (
+    <>
     <Container>
       <h1>Fisioterapia a domicilio en Barcelona</h1>
       <p>
@@ -46,10 +48,12 @@ const Home = () => {
         alrededores.
       </p>
       <ButtonContainer>
-        <StyledButton primary>Reservar cita</StyledButton>
-        <StyledButton inputColor='black'>Contáctanos</StyledButton>
+        <StyledButton>Reservar cita</StyledButton>
+        <StyledButton color='black' border='none'>Contáctanos</StyledButton>
       </ButtonContainer>
     </Container>
+    <Cards/>
+    </>
   );
 };
 export { Home };

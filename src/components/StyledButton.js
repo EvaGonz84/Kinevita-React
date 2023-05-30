@@ -4,16 +4,16 @@ export const StyledButton = styled.button`
   font-size: 1em;
   margin: 1em;
   padding: 0.5em 1.25em;
-  border: ${(props) => (props.primary ? "1px solid white" : "none")};
+  border: ${props => props.border || "1px solid white"};
   border-radius: 3px;
-  background:  ${props => props.inputColor || "transparent"};
+  background:  ${props => props.color || "transparent"};
   color: #ffff;
   margin: 24px;
   cursor: pointer;
 
   &:hover {
-    background: ${(props) => (props.primary ? "black" : "white")};
-    color: ${(props) => (props.primary ? "white" : "black")};
+    background: ${props => props.background || "white"};
+    color: ${props => props.hover || "black"};
     transition: all 0.5s ease;
   }
 
