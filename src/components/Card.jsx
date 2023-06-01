@@ -7,14 +7,22 @@ const CardContainer = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #e9e1de;
   border: 1px solid black;
   margin: 1rem;
+  
+
+  h4 {
+    text-transform: uppercase;
+    width:90%;
+  };
 
   p {
+   width: 90%;
+
     @media screen and (max-width: 968px) {
-    width: 80%;
-  }
+    
+    } 
   }
 `;
 
@@ -28,17 +36,14 @@ const CardButton = styled(StyledButton)`
   }
 `;
 
-const Card = ({ title, image }) => {
+const Card = ({ title, image, description }) => {
   return (
     <>
       <CardContainer>
         <CardImage src={image} />
-        <h1>{title}</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <CardButton color="black">Más info</CardButton>
+        <h4>{title}</h4>
+        <p>{description}</p>
+        <CardButton border='1px solid black' color="black">Más info</CardButton>
       </CardContainer>
     </>
   );

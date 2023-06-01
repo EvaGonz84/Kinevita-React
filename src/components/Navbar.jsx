@@ -16,7 +16,7 @@ const NavbarContainer = styled.header`
 `;
 
 const NavbarWrapper = styled.div`
-  padding: 1rem auto;
+  margin: auto;
   width: 100%;
   max-width: 1300px;
   height: 100%;
@@ -40,6 +40,8 @@ const LogoContainer = styled.div`
 const NavbarButton = styled(StyledButton)`
   margin-left: auto;
   color: black;
+  font-size: 1.2rem;
+  font-weight: 400;
 
   &:hover {
     background-color: #e9682d;
