@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PricesCard } from "../components/PricesCard";
 
 const Container = styled.section`
   display: flex;
@@ -19,24 +20,24 @@ const Container = styled.section`
   }
 `;
 
-
 const Prices = () => {
   return (
     <>
       <Container>
-       
-          <h2>Fisioterapia Kinevita</h2>
-          <h3>Precios fisioterapia en Barcelona y alrededores</h3>
-        
+        <h2>Fisioterapia Kinevita</h2>
+        <h3>Precios fisioterapia en Barcelona y alrededores</h3>
+
         <p>
           Fisioterapia y rehabilitación a domicilio, drenaje linfático manual.
           Sesiones privadas de 50 minutos.
         </p>
+        <PricesCard />
 
         <p>
           Sesiones de pilates, gimnasia abdominal hipopresiva, gimnasia para
           mayores. Sesiones y clases privadas de 50 minutos.
         </p>
+        <PricesCard />
       </Container>
     </>
   );
