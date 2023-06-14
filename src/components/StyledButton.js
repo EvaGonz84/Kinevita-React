@@ -15,7 +15,7 @@ export const StyledButton = styled.button`
     background: ${props => props.background || "white"};
     color: ${props => props.hover || "black"};
     transition: all 0.5s ease;
-    border: ${props => props.borderHover || "1px solid white"};
+    border: ${props => props.borderhover || "1px solid white"};
   }
 
   @media screen and (max-width: 968px) {
