@@ -10,7 +10,7 @@ const CardsContainer = styled.section`
   justify-content: space-around;
   align-items: center;
   padding: 1rem auto;
-  background-color: #f3efed;
+  background-color: #fbf9f9;
   
   @media screen and (max-width: 968px) {
     flex-direction: column;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledButton } from "../components/StyledButton";
+import * as colors from "../styles/colors";
 
 const CardContainer = styled.section`
   display: flex;
@@ -7,21 +8,19 @@ const CardContainer = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #e9e1de;
+  background-color: ${colors.BACKGROUND2};
   margin: 1rem;
-  
 
   h4 {
     text-transform: uppercase;
-    width:90%;
-  };
+    width: 90%;
+  }
 
   p {
-   width: 90%;
+    width: 90%;
 
     @media screen and (max-width: 968px) {
-    
-    } 
+    }
   }
 `;
 
@@ -42,7 +41,9 @@ const Card = ({ title, image, description }) => {
         <CardImage src={image} />
         <h4>{title}</h4>
         <p>{description}</p>
-        <CardButton borderhover='1px solid black' color="black">Más info</CardButton>
+        <CardButton borderhover="1px solid black" color="black">
+          Más info
+        </CardButton>
       </CardContainer>
     </>
   );

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { StyledButton } from "./StyledButton";
 import { useState } from "react";
+import * as colors from "../styles/colors";
 
 const FormContainer = styled.div`
   max-width: 80%;
   margin: 2rem auto;
   padding: 2rem 4rem;
-  background-color: #f3efed;
+  background-color: ${colors.BACKGROUND2};
   box-sizing: border-box;
 
   p {

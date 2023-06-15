@@ -2,6 +2,7 @@ import styled from "styled-components";
 import background from "../assets/Portada.jpg";
 import { StyledButton } from "../components/StyledButton";
 import { Cards } from "../components/Cards";
+import * as colors from "../styles/colors";
 
 const Container = styled.div`
   width: 100%;
@@ -47,15 +48,14 @@ const StyledSection = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #f3efed;
-
+  background-color: ${colors.BACKGROUND};
 
   h2 {
     font-size: 3rem;
     font-weight: lighter;
     @media screen and (max-width: 968px) {
       font-size: 2rem;
-  }
+    }
   }
 
   h4 {
@@ -63,8 +63,7 @@ const StyledSection = styled.section`
     font-weight: lighter;
     @media screen and (max-width: 968px) {
       font-size: 1rem;
-     
-  }
+    }
   }
 `;
 
@@ -86,8 +85,9 @@ const Home = () => {
       </Container>
       <StyledSection>
         <h2>Nuestros servicios</h2>
-        <h3>Ofrecemos sesiones de Fisioterapia y clases totalmente personalizadas desde tu
-          hogar
+        <h3>
+          Ofrecemos sesiones de Fisioterapia y clases totalmente personalizadas
+          desde tu hogar
         </h3>
       </StyledSection>
       <Cards />

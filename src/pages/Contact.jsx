@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { StyledButton } from "../components/StyledButton";
 import { ContactForm } from "../components/ContactForm";
+import * as colors from '../styles/colors'
 
 const Container = styled.section`
   display: flex;
@@ -9,7 +10,7 @@ const Container = styled.section`
   padding: 1rem;
   box-sizing: border-box;
   width: 100%;
-  background-color: #fbf9f9;
+  background-color: ${colors.BACKGROUND};
 
   h1 {
     text-transform: uppercase;
