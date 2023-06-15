@@ -8,7 +8,6 @@ const CardContainer = styled.section`
   align-items: center;
   text-align: center;
   background-color: #e9e1de;
-  border: 1px solid black;
   margin: 1rem;
   
 
@@ -43,7 +42,7 @@ const Card = ({ title, image, description }) => {
         <CardImage src={image} />
         <h4>{title}</h4>
         <p>{description}</p>
-        <CardButton border='1px solid black' color="black">Más info</CardButton>
+        <CardButton borderhover='1px solid black' color="black">Más info</CardButton>
       </CardContainer>
     </>
   );
