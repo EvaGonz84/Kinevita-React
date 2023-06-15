@@ -26,13 +26,18 @@ const Container = styled.section`
 `;
 
 const FormContainer = styled.div`
-  width: 500px;
+  max-width: 80%;
   margin: 2rem auto;
   padding: 2rem 4rem;
   background-color: #f3efed;
-  
+  box-sizing: border-box;
+
   p {
     text-align: center;
+  }
+
+  @media screen and (max-width: 968px) {
+    max-width: 95%;
   }
 `;
 
@@ -71,17 +76,24 @@ const TextArea = styled.textarea`
 `;
 
 const StyledDiv = styled.div`
-margin-top:0.5rem;
-@media screen and (max-width: 968px) {
+  margin: 0.5rem 0;
+  display:flex;
+  @media screen and (max-width: 968px) {
     text-align: start;
   }
 `;
 
-const ContactButton = styled(StyledButton)`
-margin: 0;
+const StyledInputDiv = styled.div`
+padding-top:0.1rem; 
 `;
 
+const ContactButton = styled(StyledButton)`
+  margin: 0;
+`;
 
+const StyledSpan = styled.span`
+  margin-left: 0.2rem;
+`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -117,7 +129,10 @@ const Contact = () => {
       {/* form */}
       <FormContainer>
         <FormTitle>formulario de contacto</FormTitle>
-        <p>Rellena el siguiente formulario con tus peticiones, dudas o sugerencias.</p>
+        <p>
+          Rellena el siguiente formulario con tus peticiones, dudas o
+          sugerencias.
+        </p>
         <Form onSubmit={handleSubmit}>
           <FormGroup>
             <InputLabel htmlFor="firstName">Nombre</InputLabel>
@@ -162,8 +177,22 @@ const Contact = () => {
               required
             />
           </FormGroup>
+
           <StyledDiv>
-          <ContactButton color="#e9682d"  borderhover="1px solid black" type="submit">Enviar</ContactButton>
+            <StyledInputDiv>
+              <input type="checkbox" />
+            </StyledInputDiv>
+            <StyledSpan>Acepto términos y condiciones</StyledSpan>
+          </StyledDiv>
+
+          <StyledDiv>
+            <ContactButton
+              color="#e9682d"
+              borderhover="1px solid black"
+              type="submit"
+            >
+              Enviar
+            </ContactButton>
           </StyledDiv>
         </Form>
       </FormContainer>
