@@ -28,7 +28,7 @@ const Container = styled.section`
 const Services = () => {
   return (
     <Container>
-      <h1>fisioterapia kinevita</h1>
+      <h1>fisioterapia a domicilio kinevita</h1>
       <h2>
         Nuestros servicios a domicilio en Barcelona con tu Fisioterapeuta de
         confianza

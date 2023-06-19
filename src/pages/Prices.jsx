@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PricesCard } from "../components/PricesCard";
-import * as colors from '../styles/colors'
+import * as colors from "../styles/colors";
 
 const Container = styled.section`
   display: flex;
@@ -11,7 +11,7 @@ const Container = styled.section`
   width: 100%;
   background-color: ${colors.BACKGROUND};
 
-  h2 {
+  h1 {
     text-transform: uppercase;
     font-size: 1.75rem;
   }
@@ -24,6 +24,7 @@ const Container = styled.section`
     text-align: center;
   }
 `;
+
 const CardsContainer = styled.article`
   display: flex;
   justify-content: space-evenly;
@@ -75,8 +76,8 @@ const Prices = () => {
   return (
     <>
       <Container>
-        <h2>Fisioterapia Kinevita</h2>
-        <h3>Precios fisioterapia en Barcelona y alrededores</h3>
+        <h1>Fisioterapia a domicilio Kinevita</h1>
+        <h2>Precios fisioterapia en Barcelona y alrededores</h2>
 
         <p>
           Fisioterapia y rehabilitación a domicilio, drenaje linfático manual.
