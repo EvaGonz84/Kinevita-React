@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { StyledButton } from "./StyledButton";
 import { useState } from "react";
 import * as colors from "../styles/colors";
+import { Link } from "react-router-dom";
 
 const FormContainer = styled.div`
-  max-width: 80%;
+  max-width: 70%;
   margin: 2rem auto;
   padding: 2rem 4rem;
   background-color: ${colors.BACKGROUND2};
@@ -16,6 +17,7 @@ const FormContainer = styled.div`
 
   @media screen and (max-width: 968px) {
     max-width: 95%;
+    padding: 2rem 1rem;
   }
 `;
 
@@ -71,6 +73,13 @@ const ContactButton = styled(StyledButton)`
 
 const StyledSpan = styled.span`
   margin-left: 0.2rem;
+`;
+
+const StyledLink = styled(Link)`
+ text-decoration: none;
+ color: black;
+ font-weight: bold;
+
 `;
 
 const ContactForm = () => {
@@ -146,7 +155,26 @@ const ContactForm = () => {
           <StyledInputDiv>
             <input type="checkbox" />
           </StyledInputDiv>
-          <StyledSpan>Acepto términos y condiciones</StyledSpan>
+          <StyledSpan>
+            Acepto y confirmo la{" "}
+            <StyledLink to="/privacidad">Política de Privacidad*</StyledLink>
+          </StyledSpan>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>
+            Política de Privacidad: Protegemos tus datos personales según la Ley
+            34/2002 (LSSI-CE) y la LOPD/RGPD. Recopilamos tus datos (nombre y
+            apellidos, correo, comentarios) sólo para brindarte el servicio de
+            fisioterapia a domicilio. Almacenamos tus datos de forma segura y
+            los conservamos el tiempo necesario. No compartimos tus datos con
+            terceros sin tu consentimiento. Puedes ejercer tus derechos de
+            acceso, rectificación, cancelación y oposición. La seguridad de tus
+            datos es importante, aunque ninguna transmisión por internet es 100%
+            segura. Nos reservamos el derecho de modificar la Política de
+            Privacidad. Para más información, contáctanos en
+            kinevita.es@gmail.com. Gracias por confiar en nosotros y proteger tu
+            privacidad.
+          </StyledSpan>
         </StyledDiv>
 
         <StyledDiv>
