@@ -3,6 +3,7 @@ import background from "../assets/Portada.jpg";
 import { StyledButton } from "../components/StyledButton";
 import { Cards } from "../components/Cards";
 import * as colors from "../styles/colors";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -78,9 +79,11 @@ const Home = () => {
         </p>
         <ButtonContainer>
           <StyledButton>Reservar cita</StyledButton>
-          <StyledButton color="black" border="none">
-            Contáctanos
-          </StyledButton>
+          <Link to="/contacto">
+            <StyledButton color="black" border="none">
+              Contáctanos
+            </StyledButton>
+          </Link>
         </ButtonContainer>
       </Container>
       <StyledSection>

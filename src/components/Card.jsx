@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { StyledButton } from "../components/StyledButton";
 import * as colors from "../styles/colors";
+import { Link } from "react-router-dom";
 
 const CardContainer = styled.section`
   display: flex;
@@ -41,9 +42,11 @@ const Card = ({ title, image, description }) => {
         <CardImage src={image} />
         <h4>{title}</h4>
         <p>{description}</p>
-        <CardButton borderhover="1px solid black" color="black">
-          Más info
-        </CardButton>
+        <Link to="/servicios">
+          <CardButton borderhover="1px solid black" color="black">
+            Más info
+          </CardButton>
+        </Link>
       </CardContainer>
     </>
   );
