@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import { StyledButton } from "./StyledButton";
+import styled, { css } from "styled-components";
 import { useState } from "react";
 import * as colors from "../styles/colors";
 import { Link } from "react-router-dom";
@@ -67,8 +66,26 @@ const StyledInputDiv = styled.div`
   padding-top: 0.1rem;
 `;
 
-const ContactButton = styled(StyledButton)`
+const ContactButton = styled.button`
   margin: 0;
+  font-size: 1em;
+  padding: 0.5em 1.25em;
+  cursor: pointer;
+
+  ${({ disabled }) =>
+    !disabled &&
+    css`
+      background-color: #e9682d;
+      color: white;
+      border: 1px solid white;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+      }
+    `}
 `;
 
 const StyledSpan = styled.span`
@@ -76,10 +93,9 @@ const StyledSpan = styled.span`
 `;
 
 const StyledLink = styled(Link)`
- text-decoration: none;
- color: black;
- font-weight: bold;
-
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 `;
 
 const ContactForm = () => {
@@ -100,6 +116,16 @@ const ContactForm = () => {
     // Aquí puedes realizar el envío de los datos del formulario
     console.log(formData);
   };
+
+  const [isDisable, setIsDisable] = useState(false);
+
+  const checkboxHandler = () => {
+    setIsDisable(!isDisable);
+  };
+  const btnHandler = () => {
+    alert("Agree");
+  };
+
   return (
     <FormContainer>
       <FormTitle>formulario de contacto</FormTitle>
@@ -153,7 +179,7 @@ const ContactForm = () => {
 
         <StyledDiv>
           <StyledInputDiv>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={checkboxHandler} />
           </StyledInputDiv>
           <StyledSpan>
             Acepto y confirmo la{" "}
@@ -182,6 +208,8 @@ const ContactForm = () => {
             color="#e9682d"
             borderhover="1px solid black"
             type="submit"
+            disabled={!isDisable}
+            onClick={btnHandler}
           >
             Enviar
           </ContactButton>
